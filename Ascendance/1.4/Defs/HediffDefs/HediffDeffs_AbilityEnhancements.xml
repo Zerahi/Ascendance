@@ -1,0 +1,694 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--Dodge-->
+
+  <HediffDef ParentName="addedPartEnhanced">
+    <defName>Ascendance_AbilityEnhanced_Dodge</defName>
+    <label>Enhanced Foot Dodge</label>
+    <description>A foot Enhancement to Dodge.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Dodge</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.49</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Reforming</label>
+        <minSeverity>0.25</minSeverity>
+        <painOffset>0.5</painOffset>
+        <restFallFactorOffset>0.25</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Enhancing</label>
+        <minSeverity>0.75</minSeverity>
+        <painOffset>0.5</painOffset>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeDodgeChance>1</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statOffsets>
+          <MeleeDodgeChance>5</MeleeDodgeChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="Ascendance_EnhancementBase">
+    <defName>Ascendance_AbilityEnhancement_Dodge</defName>
+    <label>Ability Enhancement Dodge</label>
+    <description>Enhance an biological part.\n\nPart efficiency increase when fully developed after 3 days: +5</description>
+    <descriptionHyperlinks>
+      <RecipeDef>Ascendance_AbilityEnhancment_Dodge</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Ascendance_AbilityEnhancements</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="Ascendance_EnhancementSurgeryBase">
+    <defName>Ascendance_AbilityEnhancment_Dodge</defName>
+    <label>Enhance natural body part</label>
+    <description>Enhance organic componant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Dodge</ThingDef>
+      <HediffDef>Ascendance_AbilityEnhanced_Dodge</HediffDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ascendance_AbilityEnhancement_Dodge</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ascendance_AbilityEnhancement_Dodge</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Foot</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Ascendance_AbilityEnhanced_Dodge</addsHediff>
+  </RecipeDef>
+
+  <!--Speed-->
+
+  <HediffDef ParentName="addedPartEnhanced">
+    <defName>Ascendance_AbilityEnhanced_Speed</defName>
+    <label>Enhanced Foot Speed</label>
+    <description>A foot Enhancement to Speed.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Speed</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.49</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Reforming</label>
+        <minSeverity>0.25</minSeverity>
+        <painOffset>0.5</painOffset>
+        <restFallFactorOffset>0.25</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Enhancing</label>
+        <minSeverity>0.75</minSeverity>
+        <painOffset>0.5</painOffset>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MoveSpeed>0.01</MoveSpeed>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statOffsets>
+          <MoveSpeed>0.1</MoveSpeed>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="Ascendance_EnhancementBase">
+    <defName>Ascendance_AbilityEnhancement_Speed</defName>
+    <label>Foot Enhancement Speed</label>
+    <description>Enhance an biological part.\n\nPart efficiency increase when fully developed after 3 days: +5</description>
+    <descriptionHyperlinks>
+      <RecipeDef>Ascendance_AbilityEnhancment_Speed</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Ascendance_AbilityEnhancements</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="Ascendance_EnhancementSurgeryBase">
+    <defName>Ascendance_AbilityEnhancment_Speed</defName>
+    <label>Enhance Foot Speed</label>
+    <description>Enhance organic componant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Speed</ThingDef>
+      <HediffDef>Ascendance_AbilityEnhanced_Speed</HediffDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ascendance_AbilityEnhancement_Speed</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ascendance_AbilityEnhancement_Speed</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Foot</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Ascendance_AbilityEnhanced_Speed</addsHediff>
+  </RecipeDef>
+
+  <!--Hit-->
+
+  <HediffDef ParentName="addedPartEnhanced">
+    <defName>Ascendance_AbilityEnhanced_Hit</defName>
+    <label>Enhanced Hand Hit</label>
+    <description>A hand Enhancement to Hit.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Hit</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.49</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Reforming</label>
+        <minSeverity>0.25</minSeverity>
+        <painOffset>0.5</painOffset>
+        <restFallFactorOffset>0.25</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Enhancing</label>
+        <minSeverity>0.75</minSeverity>
+        <painOffset>0.5</painOffset>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <MeleeHitChance>1</MeleeHitChance>
+
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statOffsets>
+          <MeleeHitChance>4</MeleeHitChance>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="Ascendance_EnhancementBase">
+    <defName>Ascendance_AbilityEnhancement_Hit</defName>
+    <label>Hand Enhancement Hit</label>
+    <description>Enhance an biological part.\n\nPart efficiency increase when fully developed after 3 days: +5</description>
+    <descriptionHyperlinks>
+      <RecipeDef>Ascendance_AbilityEnhancment_Hit</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Ascendance_AbilityEnhancements</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="Ascendance_EnhancementSurgeryBase">
+    <defName>Ascendance_AbilityEnhancment_Hit</defName>
+    <label>Enhance Hand Hit</label>
+    <description>Enhance organic componant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Hit</ThingDef>
+      <HediffDef>Ascendance_AbilityEnhanced_Hit</HediffDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ascendance_AbilityEnhancement_Hit</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ascendance_AbilityEnhancement_Hit</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Ascendance_AbilityEnhanced_Hit</addsHediff>
+  </RecipeDef>
+
+  <!--Work-->
+
+  <HediffDef ParentName="addedPartEnhanced">
+    <defName>Ascendance_AbilityEnhanced_Work</defName>
+    <label>Enhanced Hand Work</label>
+    <description>A hand Enhancement to Work.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Work</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.49</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Reforming</label>
+        <minSeverity>0.25</minSeverity>
+        <painOffset>0.5</painOffset>
+        <restFallFactorOffset>0.25</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Enhancing</label>
+        <minSeverity>0.75</minSeverity>
+        <painOffset>0.5</painOffset>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <WorkSpeedGlobal>0.01</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statOffsets>
+          <WorkSpeedGlobal>0.05</WorkSpeedGlobal>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="Ascendance_EnhancementBase">
+    <defName>Ascendance_AbilityEnhancement_Work</defName>
+    <label>Hand Enhancement Work</label>
+    <description>Enhance Hand.\n\nPart efficiency increase when fully developed after 3 days: +5</description>
+    <descriptionHyperlinks>
+      <RecipeDef>Ascendance_AbilityEnhancment_Work</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Ascendance_AbilityEnhancements</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="Ascendance_EnhancementSurgeryBase">
+    <defName>Ascendance_AbilityEnhancment_Work</defName>
+    <label>Enhance Hand Work</label>
+    <description>Enhance organic componant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Work</ThingDef>
+      <HediffDef>Ascendance_AbilityEnhanced_Work</HediffDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ascendance_AbilityEnhancement_Work</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ascendance_AbilityEnhancement_Work</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Ascendance_AbilityEnhanced_Work</addsHediff>
+  </RecipeDef>
+
+  <!--Aim-->
+
+  <HediffDef ParentName="addedPartEnhanced">
+    <defName>Ascendance_AbilityEnhanced_Aim</defName>
+    <label>Enhanced Hand Aim</label>
+    <description>A hand Enhancement to Aim.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Aim</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.49</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Reforming</label>
+        <minSeverity>0.25</minSeverity>
+        <painOffset>0.5</painOffset>
+        <restFallFactorOffset>0.25</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Enhancing</label>
+        <minSeverity>0.75</minSeverity>
+        <painOffset>0.5</painOffset>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ShootingAccuracyPawn>0.5</ShootingAccuracyPawn>
+          <AimingDelayFactor>-0.005</AimingDelayFactor>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statOffsets>
+          <AimingDelayFactor>-0.025</AimingDelayFactor>
+          <ShootingAccuracyPawn>2.5</ShootingAccuracyPawn>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="Ascendance_EnhancementBase">
+    <defName>Ascendance_AbilityEnhancement_Aim</defName>
+    <label>Hand Enhancement Aim</label>
+    <description>Enhance Hand.\n\nPart efficiency increase when fully developed after 3 days: +5</description>
+    <descriptionHyperlinks>
+      <RecipeDef>Ascendance_AbilityEnhancment_Aim</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Ascendance_AbilityEnhancements</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="Ascendance_EnhancementSurgeryBase">
+    <defName>Ascendance_AbilityEnhancment_Aim</defName>
+    <label>Enhance Hand Aim</label>
+    <description>Enhance organic componant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Aim</ThingDef>
+      <HediffDef>Ascendance_AbilityEnhanced_Aim</HediffDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ascendance_AbilityEnhancement_Aim</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ascendance_AbilityEnhancement_Aim</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Hand</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Ascendance_AbilityEnhanced_Aim</addsHediff>
+  </RecipeDef>
+
+  <!--Armor-->
+
+  <HediffDef ParentName="addedPartEnhanced">
+    <defName>Ascendance_AbilityEnhanced_Armor</defName>
+    <label>Enhanced Torso Armor</label>
+    <description>A Torso Enhancement to Armor.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Armor</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.49</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Reforming</label>
+        <minSeverity>0.25</minSeverity>
+        <painOffset>0.5</painOffset>
+        <restFallFactorOffset>0.25</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Enhancing</label>
+        <minSeverity>0.75</minSeverity>
+        <painOffset>0.5</painOffset>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorRating_Sharp>0.02</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.1</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.1</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statOffsets>
+          <ArmorRating_Sharp>0.52</ArmorRating_Sharp>
+          <ArmorRating_Blunt>0.2</ArmorRating_Blunt>
+          <ArmorRating_Heat>0.4</ArmorRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="Ascendance_EnhancementBase">
+    <defName>Ascendance_AbilityEnhancement_Armor</defName>
+    <label>Torso Enhancement Armor</label>
+    <description>Enhance Torso.\n\nPart efficiency increase when fully developed after 3 days: +5</description>
+    <descriptionHyperlinks>
+      <RecipeDef>Ascendance_AbilityEnhancment_Armor</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Ascendance_AbilityEnhancements</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="Ascendance_EnhancementSurgeryBase">
+    <defName>Ascendance_AbilityEnhancment_Armor</defName>
+    <label>Enhance Torso Armor</label>
+    <description>Enhance organic componant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_Armor</ThingDef>
+      <HediffDef>Ascendance_AbilityEnhanced_Armor</HediffDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ascendance_AbilityEnhancement_Armor</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ascendance_AbilityEnhancement_Armor</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Ascendance_AbilityEnhanced_Armor</addsHediff>
+  </RecipeDef>
+
+  <!--ArmorUltimate-->
+
+  <HediffDef ParentName="addedPartEnhanced">
+    <defName>Ascendance_AbilityEnhanced_ArmorUltimate</defName>
+    <label>Enhanced Torso Armor (Ultimate)</label>
+    <description>A Torso Enhancement to Armor (Ultimate).</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_ArmorUltimate</ThingDef>
+    </descriptionHyperlinks>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.49</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>Reforming</label>
+        <minSeverity>0.25</minSeverity>
+        <painOffset>0.5</painOffset>
+        <restFallFactorOffset>0.25</restFallFactorOffset>
+        <hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+        <partEfficiencyOffset>-0.1</partEfficiencyOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.1</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <label>Enhancing</label>
+        <minSeverity>0.75</minSeverity>
+        <painOffset>0.5</painOffset>
+        <hungerRateFactorOffset>1</hungerRateFactorOffset>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.5</setMax>
+          </li>
+        </capMods>
+        <statOffsets>
+          <ArmorUltimateRating_Sharp>0.02</ArmorUltimateRating_Sharp>
+          <ArmorUltimateRating_Blunt>0.1</ArmorUltimateRating_Blunt>
+          <ArmorUltimateRating_Heat>0.1</ArmorUltimateRating_Heat>
+        </statOffsets>
+      </li>
+      <li>
+        <minSeverity>0.99</minSeverity>
+        <statOffsets>
+          <ArmorUltimateRating_Sharp>1.52</ArmorUltimateRating_Sharp>
+          <ArmorUltimateRating_Blunt>0.8</ArmorUltimateRating_Blunt>
+          <ArmorUltimateRating_Heat>1.4</ArmorUltimateRating_Heat>
+        </statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <ThingDef ParentName="Ascendance_EnhancementBase">
+    <defName>Ascendance_AbilityEnhancement_ArmorUltimate</defName>
+    <label>Torso Enhancement Armor (Ultimate)</label>
+    <description>Enhance Torso.\n\nPart efficiency increase when fully developed after 3 days: +5</description>
+    <descriptionHyperlinks>
+      <RecipeDef>Ascendance_AbilityEnhancment_ArmorUltimate</RecipeDef>
+    </descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <recipeMaker>
+      <researchPrerequisite>Ascendance_AbilityEnhancements</researchPrerequisite>
+    </recipeMaker>
+  </ThingDef>
+
+  <RecipeDef ParentName="Ascendance_EnhancementSurgeryBase">
+    <defName>Ascendance_AbilityEnhancment_ArmorUltimate</defName>
+    <label>Enhance Torso Armor (Ultimate)</label>
+    <description>Enhance organic componant.</description>
+    <descriptionHyperlinks>
+      <ThingDef>Ascendance_AbilityEnhancement_ArmorUltimate</ThingDef>
+      <HediffDef>Ascendance_AbilityEnhanced_ArmorUltimate</HediffDef>
+    </descriptionHyperlinks>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Ascendance_AbilityEnhancement_ArmorUltimate</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Ascendance_AbilityEnhancement_ArmorUltimate</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <appliedOnFixedBodyParts>
+      <li>Torso</li>
+    </appliedOnFixedBodyParts>
+    <addsHediff>Ascendance_AbilityEnhanced_ArmorUltimate</addsHediff>
+  </RecipeDef>
+
+</Defs>

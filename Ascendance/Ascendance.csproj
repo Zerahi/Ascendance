@@ -45,17 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="1.4\Assemblies\Main.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="1.4\Defs\HediffDefs\HediffDeffs_AbilityEnhancements.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="1.4\Defs\HediffDefs\HediffDefs_Enhancements.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="1.4\Defs\HediffDefs\HediffDefs_AbilityEnhancements.xml">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="1.4\Defs\HediffDefs\HediffDefs_Regrow.xml" />
     <Content Include="1.4\Defs\ResearchProjectDefs\ResearchProjects_Ascendance.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -85,6 +83,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="1.4\Assemblies\" />
     <Folder Include="OtherMods\XML_Extensions\Patches\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

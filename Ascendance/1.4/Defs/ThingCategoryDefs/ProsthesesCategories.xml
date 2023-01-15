@@ -2,13 +2,19 @@
 <Defs>
 
     <ThingCategoryDef>
-      <defName>AscendanceEnhancements</defName>
+      <defName>Ascendance_Implants</defName>
+      <label>Implants</label>
+      <parent>BodyParts</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>Ascendance_Enhancements</defName>
       <label>Enhancement</label>
       <parent>BodyParts</parent>
     </ThingCategoryDef>
 
     <ThingCategoryDef>
-      <defName>AscendanceRegrowth</defName>
+      <defName>Ascendance_Regrowth</defName>
       <label>Regrowth</label>
       <parent>BodyParts</parent>
     </ThingCategoryDef>

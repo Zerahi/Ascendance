@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+  
+  <ThingDef Name="Ascendance_RegrowthItemBase" ParentName="BodyPartBionicBase" Abstract="True">
+    <isTechHediff>false</isTechHediff>
+    <stackLimit>5</stackLimit>
+    <drawGUIOverlay>true</drawGUIOverlay>
+    <thingCategories Inherit="False">
+      <li>EPIA_BodyRestoration</li>
+    </thingCategories>
+  </ThingDef>
+	
+	<!-- RegerationExciter -->
+
+	<ThingDef ParentName="Ascendance_RegrowthItemBase">
+		<defName>RegenerationExciter</defName>
+		<label>growth exciter</label>
+		<description>A regeneration exciter that will regrow one part.</description>
+		<descriptionHyperlinks>
+			<RecipeDef>Ascendance_RegrowthPart</RecipeDef>
+		</descriptionHyperlinks>
+    <costList>
+      <Steel>1</Steel>
+    </costList>
+    <thingSetMakerTags>
+      <li>RewardStandardLowFreq</li>
+    </thingSetMakerTags>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>0</Crafting>
+      </skillRequirements>
+      <researchPrerequisite>Ascendance_Regrowth</researchPrerequisite>
+      <recipeUsers>
+        <li>TableMachining</li>
+      </recipeUsers>
+    </recipeMaker>
+		<statBases>
+			<WorkToMake>1</WorkToMake>
+			<Mass>0.5</Mass>
+		</statBases>
+	</ThingDef>
+
+	<RecipeDef name="Ascendance_RegrowthPart" ParentName="SurgeryFlesh" Abstract="True">
+    <uiIconThing>Ascendance_Enhancement</uiIconThing>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+    <workerClass>Ascendance.Recipe_RegrowthHediff</workerClass>
+		<jobString>Regrow body part.</jobString>
+		<successfullyRemovedHediffMessage>{0} has successfully regrown {1}'s body part.</successfullyRemovedHediffMessage>
+		<descriptionHyperlinks><ThingDef>Ascendance_RegrowthItemBase</ThingDef></descriptionHyperlinks>
+		<uiIconThing>Ascendance_RegrowthItemBase</uiIconThing>
+		<surgerySuccessChanceFactor>0.9</surgerySuccessChanceFactor>
+		<workAmount>2500</workAmount>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Ascendance_RegrowthItemBase</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+			<thingDefs>
+				<li>Ascendance_RegrowthItemBase</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<skillRequirements>
+			<Medicine>7</Medicine>
+		</skillRequirements>
+	</RecipeDef>
+  
+</Defs>

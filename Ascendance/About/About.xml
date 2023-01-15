@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>Ascendance</name>
+	<author>Zerahi</author>
+    <url>https://github.com/Zerahi/Ascendance</url>
+	<supportedVersions>
+		<li>1.4</li>
+	</supportedVersions>
+	<packageId>zer.ascendance</packageId>
+	<description>Ascendance</description>
+</ModMetaData>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HediffDef Name="addedEnhancement" Abstract="True">
+		<defaultLabelColor>(244,210,131)</defaultLabelColor>
+		<hediffClass>Hediff_Implant</hediffClass>
+		<isBad>false</isBad>
+		<initialSeverity>0.001</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<priceImpact>true</priceImpact>
+		<countsAsAddedPartOrImplant>false</countsAsAddedPartOrImplant>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartBionicBase" Abstract="True">
+    <defName>Ascendance_Enhancement</defName>
+    <stackLimit>5</stackLimit>
+    <drawGUIOverlay>true</drawGUIOverlay>
+	    <techLevel>Spacer</techLevel>
+		<thingCategories Inherit="False">
+			<li>AscendanceEnhancements</li>
+		</thingCategories>
+    <statBases>
+      <WorkToMake>1</WorkToMake>
+    </statBases>
+		<recipeMaker>
+			<soundWorking>Recipe_Smith</soundWorking>
+			<skillRequirements>
+				<Crafting>0</Crafting>
+			</skillRequirements>
+			<researchPrerequisite>Ascendance_Enhancements</researchPrerequisite>
+			<recipeUsers>
+				<li>TableMachining</li>
+			</recipeUsers>
+		</recipeMaker>
+		<techHediffsTags Inherit="False">
+			<li>Advanced</li>
+		</techHediffsTags>
+	</ThingDef>
+
+	<RecipeDef Name="AscendanceApplyEnhancement" ParentName="SurgeryFlesh" Abstract="True">
+		<uiIconThing>Ascendance_Enhancement</uiIconThing>
+		<deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+		<workerClass>Recipe_InstallImplant</workerClass>
+		<jobString>Enhance natural body part.</jobString>
+		<workAmount>3000</workAmount>
+		<skillRequirements>
+			<Medicine>0</Medicine>
+		</skillRequirements>
+		<recipeUsers>
+			<li>Human</li>
+		</recipeUsers>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>Medicine</li>
+					</categories>
+				</filter>
+				<count>2</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>Medicine</li>
+			</categories>
+		</fixedIngredientFilter>
+	</RecipeDef>
+
+	<HediffDef ParentName="addedEnhancement">
+		<defName>Ascendance_OrganicEnhanced</defName>
+		<label>enhanced</label>
+		<description>An enhanced natural body part.</description>
+		<descriptionHyperlinks><ThingDef>Ascendance_Enhancement</ThingDef></descriptionHyperlinks>
+		<comps>
+			<li Class="HediffCompProperties_SeverityPerDay">
+				<severityPerDay>0.33</severityPerDay>
+			</li>
+		</comps>
+		<stages>
+			<li>
+				<label>Applied</label>
+				<painFactor>1.25</painFactor>
+				<restFallFactorOffset>0.5</restFallFactorOffset>
+				<hungerRateFactorOffset>1</hungerRateFactorOffset>
+				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
+				<capMods>
+					<li>
+						<capacity>Consciousness</capacity>
+						<setMax>0.1</setMax>
+					</li>
+				</capMods>
+			</li>
+			<li>
+				<label>Changing</label>
+				<minSeverity>0.25</minSeverity>
+				<painFactor>1.25</painFactor>
+				<restFallFactorOffset>0.25</restFallFactorOffset>
+				<hungerRateFactorOffset>0.5</hungerRateFactorOffset>
+				<partEfficiencyOffset>-0.1</partEfficiencyOffset>
+			</li>
+			<li>
+				<label>Enhancing</label>
+				<minSeverity>0.75</minSeverity>
+				<partEfficiencyOffset>0.05</partEfficiencyOffset>
+			</li>
+			<li>
+				<minSeverity>0.99</minSeverity>
+				<partEfficiencyOffset>0.15</partEfficiencyOffset>
+			</li>
+		</stages>
+	</HediffDef>
+
+	<RecipeDef ParentName="AscendanceApplyEnhancement">
+		<defName>Ascendance_Enhancing</defName>
+		<label>Enhance natural body part</label>
+		<description>Improve and bring out the potential of a natural body part with the organic enhancement, with the surgeon carefully monitoring the initial application and progress.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Ascendance_Enhancement</ThingDef>
+			<HediffDef>Ascendance_OrganicEnhanced</HediffDef>
+		</descriptionHyperlinks>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Ascendance_Enhancement</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Ascendance_Enhancement</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Shoulder</li>
+			<li>Leg</li>
+			<li>Ear</li>
+			<li>Eye</li>
+			<li>Spine</li>
+			<li>Jaw</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Ascendance_OrganicEnhanced</addsHediff>
+	</RecipeDef>
+
+	<RecipeDef ParentName="AscendanceApplyEnhancement">
+		<defName>Ascendance_Enhance_Organ</defName>
+		<label>Enhance natural organ</label>
+		<description>Improve and bring out the potential of a natural organ with the organic enhancement nanobots, with the surgeon carefully monitoring the initial application and progress.</description>
+		<descriptionHyperlinks>
+			<ThingDef>Ascendance_Enhancement</ThingDef>
+			<HediffDef>Ascendance_OrganicEnhanced</HediffDef>
+		</descriptionHyperlinks>
+		<surgerySuccessChanceFactor>0.85</surgerySuccessChanceFactor>
+		<ingredients>
+			<li>
+				<filter>
+					<thingDefs>
+						<li>Ascendance_Enhancement</li>
+					</thingDefs>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<thingDefs>
+				<li>Ascendance_Enhancement</li>
+			</thingDefs>
+		</fixedIngredientFilter>
+		<appliedOnFixedBodyParts>
+			<li>Heart</li>
+			<li>Lung</li>
+			<li>Kidney</li>
+			<li>Liver</li>
+			<li>Stomach</li>
+		</appliedOnFixedBodyParts>
+		<addsHediff>Ascendance_OrganicEnhanced</addsHediff>
+	</RecipeDef>
+</Defs>

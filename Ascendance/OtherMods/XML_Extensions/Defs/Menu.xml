@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<XmlExtensions.SettingsMenuDef>
+		<defName>Ascendance_Menu</defName>
+		<modId>zer.ascendance</modId>
+		<label>Ascendance</label>
+		<settings>
+		</settings>
+	</XmlExtensions.SettingsMenuDef>
+
+</Defs>

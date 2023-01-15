@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>AscendanceEnhancements</defName>
+      <label>Enhancement</label>
+      <parent>BodyParts</parent>
+    </ThingCategoryDef>
+
+    <ThingCategoryDef>
+      <defName>AscendanceRegrowth</defName>
+      <label>Regrowth</label>
+      <parent>BodyParts</parent>
+    </ThingCategoryDef>
+
+</Defs>
